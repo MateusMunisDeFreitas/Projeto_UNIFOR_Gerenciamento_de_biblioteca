@@ -366,9 +366,4 @@ public class View extends JFrame {
 
         setVisible(true);
     }
-
-    public static void main(String[] args) {
-        new View().janelaPrincipal();
-    }
-
 }
