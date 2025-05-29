@@ -60,7 +60,7 @@ public class View extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame janelaCadastrarAluno = new JFrame("Cadastro de aluno");
-                janelaCadastrarAluno.setSize(300, 250);
+                janelaCadastrarAluno.setSize(300, 230);
                 janelaCadastrarAluno.setLocationRelativeTo(null);
                 janelaCadastrarAluno.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 janelaCadastrarAluno.setLayout(null);
@@ -102,7 +102,7 @@ public class View extends JFrame {
                 inputMes.setBounds(135, 120, 25, 25);
                 labelAno.setBounds(170, 120, 50, 25);
                 inputAno.setBounds(215, 120, 40, 25);
-                buttonCadastrar.setBounds(10, 150, 100, 25);
+                buttonCadastrar.setBounds(100, 160, 100, 25);
 
                 janelaCadastrarAluno.add(labelNome);
                 janelaCadastrarAluno.add(inputNome);
