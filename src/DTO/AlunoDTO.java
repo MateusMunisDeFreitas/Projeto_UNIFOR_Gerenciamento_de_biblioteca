@@ -7,6 +7,15 @@ public class AlunoDTO {
     private String nome_aluno, matricula_aluno;
     private Date data_nascimento;
 
+    @Override
+    public String toString() {
+        return "AlunoDTO{" +
+                "nome_aluno='" + nome_aluno + '\'' +
+                ", matricula_aluno='" + matricula_aluno + '\'' +
+                ", data_nascimento=" + data_nascimento +
+                '}';
+    }
+
     public AlunoDTO(String nome, String matricula, int dia, int mes, int ano){
         LocalDate localDate = LocalDate.of(ano, mes, dia);
         nome_aluno = nome;
