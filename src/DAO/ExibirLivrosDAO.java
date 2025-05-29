@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ExibirLivrosDAO {
-
+    //Exibir todos os livros do BD, exibindo seu estoque
     public void exibirLivros() {
         ArrayList<LivroDTO> listaLivros = new ArrayList();
         Connection conn = new ConexaoDAO().conectaDB();
@@ -40,7 +40,7 @@ public class ExibirLivrosDAO {
 
         JOptionPane.showMessageDialog(null, texto);
     }
-
+    // Exibri somentes o livros disponiveis no BD para emprestimo
     public void exibirLivrosDisponiveis() {
         Connection conn = new ConexaoDAO().conectaDB();
         String sql = "SELECT * FROM livros WHERE quantidade_estoque > 0";

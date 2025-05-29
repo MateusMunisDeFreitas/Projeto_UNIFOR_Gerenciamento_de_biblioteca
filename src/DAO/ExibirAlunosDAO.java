@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class ExibirAlunosDAO {
-
+    //Exibir todos os alunos presente no BD
     public void exibirAlunos() {
         ArrayList<LivroDTO> listaAlunos = new ArrayList();
         Connection conn = new ConexaoDAO().conectaDB();

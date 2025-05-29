@@ -14,13 +14,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class View extends JFrame {
+    // Janela principal do programa
     public void janelaPrincipal(){
         setTitle("Biblioteca");
         setSize(430, 230);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
-//        janelaCadastrarAluno(false);
+        //janelaCadastrarAluno(false);
         LinkedList<String> lista = new LinkedList<>();
         lista.add("Um");
         lista.add("Dois");
@@ -50,6 +51,7 @@ public class View extends JFrame {
         alunoMenu.add(cadastrarAluno);
         alunoMenu.add(excluirAluno);
 
+        //Acoes dos botoes da janela principal
         exibirAlunos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,6 +61,7 @@ public class View extends JFrame {
         cadastrarAluno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Se clicado em cadastrar, abrisse uma subjanela
                 JFrame janelaCadastrarAluno = new JFrame("Cadastro de aluno");
                 janelaCadastrarAluno.setSize(300, 230);
                 janelaCadastrarAluno.setLocationRelativeTo(null);
@@ -116,7 +119,7 @@ public class View extends JFrame {
                 janelaCadastrarAluno.add(labelAno);
                 janelaCadastrarAluno.add(inputAno);
                 janelaCadastrarAluno.add(buttonCadastrar);
-
+                //Acao botao subjanela cadastrar
                 buttonCadastrar.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -125,13 +128,13 @@ public class View extends JFrame {
                         new CadastrarAlunoDAO().cadastrarAluno(aluno);
                     }
                 });
-
                 janelaCadastrarAluno.setVisible(true);
             }
         });
         excluirAluno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Se clicado em exculir, abrisse uma subjanela
                 JFrame janelaExcluirAluno = new JFrame("Excluir aluno");
                 janelaExcluirAluno.setSize(300, 200);
                 janelaExcluirAluno.setLocationRelativeTo(null);
@@ -181,7 +184,7 @@ public class View extends JFrame {
                 janelaExcluirAluno.add(labelAno);
                 janelaExcluirAluno.add(inputAno);
                 janelaExcluirAluno.add(buttonExcluir);
-
+                // Acao botao excluir aluno
                 buttonExcluir.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -209,6 +212,7 @@ public class View extends JFrame {
         cadastrarLivro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Se clicado em cadastrar, abrisse uma subjanela
                 JFrame janelaCadastrarLivro = new JFrame("Cadastro de livro");
                 janelaCadastrarLivro.setSize(400, 220);
                 janelaCadastrarLivro.setLocationRelativeTo(null);
@@ -253,7 +257,7 @@ public class View extends JFrame {
                 janelaCadastrarLivro.add(labelQuantidade);
                 janelaCadastrarLivro.add(inputQuantidadeLivro);
                 janelaCadastrarLivro.add(buttonCadastrar);
-
+                // Acao botao cadastrar livro
                 buttonCadastrar.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -269,6 +273,7 @@ public class View extends JFrame {
         excluirLirvos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Se clicado em excluir, abrisse uma subjanela
                 JFrame janelaExcluirLivro = new JFrame("Cadastro de livro");
                 janelaExcluirLivro.setSize(400, 170);
                 janelaExcluirLivro.setLocationRelativeTo(null);
@@ -298,7 +303,7 @@ public class View extends JFrame {
                 janelaExcluirLivro.add(labelAutor);
                 janelaExcluirLivro.add(inputAutor);;
                 janelaExcluirLivro.add(buttonExcluir);
-
+                //Acao botao excluir livro
                 buttonExcluir.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
